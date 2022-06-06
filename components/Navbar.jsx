@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { logo } from "../utils/constants.js"
+import SearchBar from './SearchBar.jsx'
 
 const Navbar = () => {
   return (
@@ -10,6 +11,7 @@ const Navbar = () => {
     <Link href='/'>
     <Image loader={()=>logo} src={logo} alt="logo" height={45} width={45}/>
     </Link>
+    <SearchBar/>
    </Stack>
   )
 }
