@@ -1,6 +1,8 @@
+import { Box, Stack } from '@mui/system';
 import React from 'react';
-import { Loader } from './';
-const Videos = ({videos}) => {
+import { Loader, VideoCard } from './';
+
+const Videos = ({videos,direction}) => {
   if(!videos?.length) return <Loader />;
   console.log(videos,"helloo")
   return (
