@@ -1,17 +1,18 @@
-import SearchIcon from '@mui/icons-material/Search';
-import { IconButton, Paper } from '@mui/material';
-import { useRouter } from 'next/router';
 import React, { useState } from 'react';
+import { Paper, IconButton } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
+import { useRouter } from 'next/router';
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const router=useRouter()
+  const router = useRouter();
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
 
     if (searchTerm) {
       router.push(`/search/${searchTerm}`);
+
       setSearchTerm('');
     }
   };
