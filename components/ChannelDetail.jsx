@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
-import Loader, { ChannelCard, Videos } from "./";
+import { ChannelCard, Loader, Videos } from "./";
 
 const ChannelDetail = () => {
   const [channelDetail, setChannelDetail] = useState();
