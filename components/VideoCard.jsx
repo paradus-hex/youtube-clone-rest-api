@@ -6,7 +6,7 @@ import React from 'react';
 import { demoChannelTitle, demoChannelUrl, demoThumbnailUrl, demoVideoTitle, demoVideoUrl } from "../utils/constants";
 
 const VideoCard = ({ video: { id: { videoId }, snippet } }) => (
-  <Card sx={{ width: { xs: '100%', sm: '358px', md: "320px", }, boxShadow: "none", borderRadius: 0 }}>
+  <Card sx={{ width: { xs: '100%', sm: '358px', md: "320px", }, boxShadow: "none", borderRadius: 0,cursor:'pointer' }}>
     <Link href={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKfY` }>
       <CardMedia image={snippet?.thumbnails?.high?.url || demoThumbnailUrl} alt={snippet?.title} 
         sx={{ width: { xs: '100%', sm: '358px'}, height: 180 }} 
